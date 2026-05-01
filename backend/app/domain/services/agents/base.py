@@ -35,7 +35,7 @@ class BaseAgent(ABC):
     max_iterations: int = 100
     max_retries: int = 3
     retry_interval: float = 1.0
-    tool_choice: Optional[str] = None
+    tool_choice: Optional[str] = "auto"
 
     _JSON_PARSE_PROMPT = PromptTemplate.from_template(
         "Extract or repair the JSON from the following LLM output.\n\n{input}"
